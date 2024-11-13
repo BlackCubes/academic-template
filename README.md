@@ -1,1 +1,5 @@
-# shs-sped-score
+# Academic
+
+## 📌 Project Requirements
+
+- Python `v3.12.5`
