@@ -2,4 +2,4 @@
 
 ## 📌 Project Requirements
 
-- Python `v3.12.5`
+- Python `v3.12.6`
