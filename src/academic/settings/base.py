@@ -3,10 +3,8 @@ from pathlib import Path
 
 DATA_DIR = os.getenv("DATA_DIR", "")
 
-STATIC_DIR = os.getenv("STATIC_DIR", "")
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "TRUE") == "True"
@@ -90,7 +88,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(STATIC_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = "/static/"
 
 MEDIA_ROOT = os.path.join(DATA_DIR, "media")
