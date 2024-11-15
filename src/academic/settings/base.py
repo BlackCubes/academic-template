@@ -9,7 +9,7 @@ STATIC_DIR = os.getenv("STATIC_DIR")
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
+DEBUG = os.getenv("DEBUG") == "True"
 
 # Application definition
 INSTALLED_APPS = [
