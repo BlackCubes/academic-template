@@ -1,6 +1,7 @@
 import os
 
 DATA_DIR = os.getenv("DATA_DIR", "")
+STATIC_DIR = os.getenv("STATIC_DIR", "")
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -84,8 +85,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(STATIC_DIR, "")
+STATIC_URL = os.path.join(STATIC_DIR, "")
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
