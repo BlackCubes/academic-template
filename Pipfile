@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 django = "*"
 pre-commit = "*"
+psycopg = {extras = ["binary", "pool"], version = "*"}
 
 [dev-packages]
 
