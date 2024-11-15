@@ -1,5 +1,4 @@
 import os
-from pathlib import Path
 
 DATA_DIR = os.getenv("DATA_DIR", "")
 
@@ -7,7 +6,7 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "TRUE") == "True"
+DEBUG = os.getenv("DEBUG", "TRUE") == "TRUE"
 
 # Application definition
 INSTALLED_APPS = [
@@ -91,7 +90,5 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = "/static/"
 
-MEDIA_ROOT = os.path.join(DATA_DIR, "media")
-MEDIR_URL = "/media/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
