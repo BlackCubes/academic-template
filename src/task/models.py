@@ -76,7 +76,7 @@ class Task(models.Model):
         error_messages=model_error_messages["task"]["uuid"],
     )
     group = models.ForeignKey(
-        Type,
+        Group,
         on_delete=models.CASCADE,
         related_name="task_group",
         error_messages=model_error_messages["task"]["group"],
