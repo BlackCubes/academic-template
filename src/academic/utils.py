@@ -8,4 +8,4 @@ def current_year() -> int:
 
 
 def current_datetime_utc() -> datetime.datetime:
-    return timezone.now()
+    return timezone.now
