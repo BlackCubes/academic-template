@@ -41,7 +41,7 @@ class Score(models.Model):
     task = models.ForeignKey(
         Task,
         on_delete=models.CASCADE,
-        related_name="weight_group",
+        related_name="score_task",
         error_messages=model_error_messages["score"]["task"],
     )
     score = models.PositiveIntegerField(
