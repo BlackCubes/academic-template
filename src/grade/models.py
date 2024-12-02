@@ -30,6 +30,9 @@ class Weight(models.Model):
         error_messages=model_error_messages["weight"]["weight"],
     )
 
+    def __str__(self):
+        return f"{self.weight} weight for {self.group}"
+
 
 class Score(models.Model):
     uuid = models.UUIDField(
@@ -53,6 +56,9 @@ class Score(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.score} score for {self.task}"
 
 
 class ScoreStudent(models.Model):
@@ -80,3 +86,6 @@ class ScoreStudent(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.student} student submitted at {self.submitted_at} with a {self.score}"
