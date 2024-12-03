@@ -65,7 +65,7 @@ class Group(models.Model):
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
 
     def __str__(self):
-        return f"Group: {self.type}, {self.category}"
+        return f"{self.type} and {self.category} group"
 
 
 class Task(models.Model):
@@ -105,4 +105,4 @@ class Task(models.Model):
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
 
     def __str__(self):
-        return f"'{self.title}' task: {self.points} points, {self.expected_at} expected date"
+        return f"'{self.title}' task worth {self.points} points with an expected date to be turned in at {self.expected_at}"
