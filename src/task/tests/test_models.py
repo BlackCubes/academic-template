@@ -98,19 +98,19 @@ class GroupModelTest(TestCase):
 
     def test_group_string_representation(self):
         self.assertEqual(
-            str(self.group_1), f"Group: {self.group_1.type}, {self.group_1.category}"
+            str(self.group_1), f"{self.group_1.type} and {self.group_1.category} group"
         )
 
         self.assertEqual(
-            str(self.group_2), f"Group: {self.group_2.type}, {self.group_2.category}"
+            str(self.group_2), f"{self.group_2.type} and {self.group_2.category} group"
         )
 
         self.assertEqual(
-            str(self.group_3), f"Group: {self.group_3.type}, {self.group_3.category}"
+            str(self.group_3), f"{self.group_3.type} and {self.group_3.category} group"
         )
 
         self.assertEqual(
-            str(self.group_4), f"Group: {self.group_4.type}, {self.group_4.category}"
+            str(self.group_4), f"{self.group_4.type} and {self.group_4.category} group"
         )
 
 
@@ -160,10 +160,10 @@ class TaskModelTest(TestCase):
     def test_task_string_representation(self):
         self.assertEqual(
             str(self.task_1),
-            f"'{self.task_1.title}' task: {self.task_1.points} points, {self.task_1.expected_at} expected date",
+            f"'{self.task_1.title}' task worth {self.task_1.points} points with an expected date to be turned in at {self.task_1.expected_at}",
         )
 
         self.assertEqual(
             str(self.task_2),
-            f"'{self.task_2.title}' task: {self.task_2.points} points, {self.task_2.expected_at} expected date",
+            f"'{self.task_2.title}' task worth {self.task_2.points} points with an expected date to be turned in at {self.task_2.expected_at}",
         )
