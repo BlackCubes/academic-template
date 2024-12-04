@@ -16,7 +16,7 @@ class Type(models.Model):
         error_messages=model_error_messages["type"]["uuid"],
     )
     title = models.CharField(
-        max_length=50, error_messages=model_error_messages["type"]["title"]
+        unique=True, max_length=50, error_messages=model_error_messages["type"]["title"]
     )
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -33,7 +33,9 @@ class Category(models.Model):
         error_messages=model_error_messages["category"]["uuid"],
     )
     title = models.CharField(
-        max_length=50, error_messages=model_error_messages["category"]["title"]
+        unique=True,
+        max_length=50,
+        error_messages=model_error_messages["category"]["title"],
     )
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)

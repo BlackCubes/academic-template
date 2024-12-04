@@ -7,6 +7,7 @@ model_error_messages = {
             "max_length": "The student ID should not exceed 10 characters",
             "null": "The student ID cannot be empty",
             "required": "The student ID is required.",
+            "unique": "The student ID is not unique.",
         },
         "full_name": {
             "blank": "The full name cannot be empty",

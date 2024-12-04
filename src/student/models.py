@@ -17,7 +17,9 @@ class Student(models.Model):
         error_messages=model_error_messages["student"]["uuid"],
     )
     student_id = models.CharField(
-        max_length=10, error_messages=model_error_messages["student"]["student_id"]
+        unique=True,
+        max_length=10,
+        error_messages=model_error_messages["student"]["student_id"],
     )
     full_name = models.CharField(
         max_length=100, error_messages=model_error_messages["student"]["full_name"]
