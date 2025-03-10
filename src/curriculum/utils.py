@@ -1,13 +1,12 @@
 model_error_messages = {
-    "student": {
+    "teacher": {
         "uuid": {"unique": "The UUID is not unique"},
-        "student_id": {
-            "blank": "The student ID cannot be empty",
-            "invalid": "Invalid value for the student ID",
-            "max_length": "The student ID should not exceed 10 characters",
-            "null": "The student ID cannot be empty",
-            "required": "The student ID is required.",
-            "unique": "The student ID is not unique.",
+        "teacher_id": {
+            "blank": "The teacher ID cannot be empty",
+            "invalid": "Invalid value for the teacher ID",
+            "max_length": "The teacher ID should not exceed 10 characters",
+            "null": "The teacher ID cannot be empty",
+            "required": "The teacher ID is required.",
         },
         "full_name": {
             "blank": "The full name cannot be empty",
@@ -15,6 +14,26 @@ model_error_messages = {
             "max_length": "The full name should not exceed 10 characters",
             "null": "The full name cannot be empty",
             "required": "The full name is required.",
+        },
+    },
+    "room": {
+        "uuid": {"unique": "The UUID is not unique"},
+        "room_number": {
+            "blank": "The room number cannot be empty",
+            "invalid": "Invalid value for the room number",
+            "max_length": "The room number should not exceed 10 characters",
+            "null": "The room number cannot be empty",
+            "required": "The room number is required.",
+        },
+    },
+    "subject": {
+        "uuid": {"unique": "The UUID is not unique"},
+        "title": {
+            "blank": "The title cannot be empty",
+            "invalid": "Invalid value for the title",
+            "max_length": "The title should not exceed 100 characters",
+            "null": "The title cannot be empty",
+            "required": "The title is required.",
         },
     },
     "level": {

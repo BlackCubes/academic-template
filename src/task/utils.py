@@ -7,6 +7,7 @@ model_error_messages = {
             "max_length": "The title should not exceed 50 characters",
             "null": "The title cannot be empty",
             "required": "The title is required",
+            "unique": "The title is not unique",
         },
     },
     "category": {
@@ -17,6 +18,7 @@ model_error_messages = {
             "max_length": "The title should not exceed 50 characters",
             "null": "The title cannot be empty",
             "required": "The title is required",
+            "unique": "The category is not unique",
         },
     },
     "group": {
