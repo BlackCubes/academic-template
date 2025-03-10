@@ -70,6 +70,7 @@ class Group(models.Model):
         return f"{self.type} and {self.category} group"
 
 
+# TODO: Make title into own table
 class Task(models.Model):
     uuid = models.UUIDField(
         unique=True,
